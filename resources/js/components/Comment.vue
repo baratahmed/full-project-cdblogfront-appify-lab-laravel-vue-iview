@@ -6,7 +6,7 @@
         <div class="cmnt_box_top dis_flx">
             <div class="cmnt_box_top_left d-flex">
                 <div class="cmnt_img mar_r15">
-                    <img src="/img/girl2-cmnt.jpg" alt="image">
+                    <img src="http://cherisheddream.xyz/cdblogfront/img/girl2-cmnt.jpg" alt="image">
                 </div>
                 <div class="cmnnt_name">
                     <div class="cmnt_name_left">
@@ -34,7 +34,7 @@
         <div class="cmnt_box_top dis_flx">
             <div class="cmnt_box_top_left d-flex">
                 <div class="cmnt_img mar_r15">
-                    <img src="/img/girl4-cmnt.jpg" alt="image">
+                    <img src="http://cherisheddream.xyz/cdblogfront/img/girl4-cmnt.jpg" alt="image">
                 </div>
                 <div class="cmnnt_name">
                     <div class="cmnt_name_left">

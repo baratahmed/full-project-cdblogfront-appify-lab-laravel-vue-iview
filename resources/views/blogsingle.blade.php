@@ -6,7 +6,7 @@
 
 		<!-- BANNER -->
 		<div class="blog_banner" style=" position: relative;
-        background: url(../../img/blog_details_banner.jpg) no-repeat center center;
+        background: url(../img/blog_details_banner.jpg) no-repeat center center;
         min-height: 360px;
         z-index: 1;
         background-size: cover;
@@ -27,11 +27,11 @@
                                         @if (count($blog->categories) > 0)
                                         @foreach ($blog->categories as $category)
                                             <li>
-                                                <a href="blog.html">{{$category->categoryName}}</a>
+                                                <a href="{{url('/category',[$category->categoryName,$category->id])}}">{{$category->categoryName}}</a>
                                             </li>
                                         @endforeach
                                         @endif
-										<li>1 Feb, 2020</li>
+										<li>1 Feb, 2021</li>
 									</ul>
 								</div>
 								<div class="blog_post">
@@ -39,10 +39,10 @@
 									<div class="post_author_sec">
 										<div class="post_author_left">
 											<div class="post_author_img">
-												<img src="/img/man1.jpg" alt="image">
+												<img src="{{asset('/img/man1.jpg')}}" alt="image">
 											</div>
 											<div class="post_author_info">
-											<a href="contact_me.html"><h4 class="post_author_title">{{$blog->user->fullName}}</h4></a>
+											<a href="{{url('/contact')}}"><h4 class="post_author_title">{{$blog->user->fullName}}</h4></a>
 												<P>Avi is a full-stack developer skilled with Python, Javascript and many other language</P>
 											</div>
 										</div>
@@ -121,10 +121,10 @@
 								<!-- iteam -->
 								<div class="blog_post_r8_item">
 									<div class="blog_post_item_lft">
-										<img src="/img/man3.jpg" alt="image">
+										<img src="{{asset('/img/man3.jpg')}}" alt="image">
 									</div>
 									<div class="blog_post_item_r8">
-										<a href="/blog/{{$b->slug}}">
+										<a href="{{url('/blog',$b->slug)}}">
 											<h4 class="blog_post_item_r8_h4">
 												{{$b->title}}
 											</h4>
@@ -191,7 +191,7 @@
 									@if (count($blog->tags) > 0)
                                         @foreach ($blog->tags as $tag)
                                         <li>
-                                            <a href="/tag/{{$tag->tagName}}/{{$tag->id}}">{{$tag->tagName}}</a>
+                                            <a href="{{url('/tag',[$tag->tagName,$tag->id])}}">{{$tag->tagName}}</a>
                                         </li>
                                         @endforeach
                                     @endif

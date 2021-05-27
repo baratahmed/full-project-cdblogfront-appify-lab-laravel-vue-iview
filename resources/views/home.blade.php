@@ -12,7 +12,7 @@
 							@if (count ($categories) > 0)
 								@foreach ($categories as $category)
 								<div class="col-12 col-md-4 col-lg-4">
-									<a href="">
+									<a href="{{url('/category',[$category->categoryName,$category->id])}}">
 										<div class="banner_box">
 											<i class="fab fa-laravel"></i>
 											<h3 class="banner_box_h3">{{$category->categoryName}}</h3>
@@ -42,7 +42,7 @@
 								<a href="blog_post.html">
 									<div class="home_card">
 										<div class="home_card_top">
-											<img src="/img/card4.jpg" alt="image">
+											<img src="{{asset('/img/card4.jpg')}}" alt="image">
 										</div>
 										<div class="home_card_bottom">
 											<div class="home_card_bottom_text">
@@ -81,7 +81,7 @@
 						@endif
 					</div>
 					<div class="text-center" >
-						<button style="border-radius: 10px; "><a href="/blogs" style="padding: 15px;">View All</a></button>
+						<button style="border-radius: 10px; "><a href="{{url('/blogs')}}" style="padding: 15px;">View All</a></button>
 					</div>
 				</div>
 			</div>

@@ -38,35 +38,35 @@
 						@if (count ($blogs) > 0)
 							@foreach ($blogs as $blog)
 							<div class="col-12 col-md-6 col-lg-4">
-								<a href="blog_post.html">
+								<a href="{{url('/blog',$blog->slug)}}">
 									<div class="home_card">
 										<div class="home_card_top">
-											<img src="img/card1.jpg" alt="image">
+											<img src="{{asset('/img/card3.jpg')}}" alt="image">
 										</div>
 										<div class="home_card_bottom">
 											<div class="home_card_bottom_text">
 												<ul class="home_card_bottom_text_ul">
 													@foreach ($blog->categories as $category)
 													<li>
-														<a href="blog_post.html">{{$category->categoryName}}</a>
+														<a href="{{url('/category',[$category->categoryName,$category->id])}}">{{$category->categoryName}}</a>
 														<span><i class="fas fa-angle-right"></i></span>
 													</li>
 													@endforeach
 												</ul>
-												<a href="/blog/{{$blog->slug}}">
-													<h2 class="home_card_h2">{{$blog->title}}</h2>
+												<a href="{{url('/blog',$blog->slug)}}">
+													<h2 class="home_card_h2" style="min-height:23px;">{{$blog->title}}</h2>
 												</a>
 												<p class="post_p">
 													{{$blog->post_excerpt}}
 												</p>
 												<div class="home_card_bottom_tym">
 													<div class="home_card_btm_left">
-														<img src="img/man1.jpg" alt="image">
+														<img src="{{asset('/img/man1.jpg')}}" alt="image">
 													</div>
 													<div class="home_card_btm_r8">
-													<a href="contact_me.html"><p class="author_name">{{$blog->user->fullName}}</p></a>
+													<a href="{{url('/contact')}}"><p class="author_name">{{$blog->user->fullName}}</p></a>
 														<ul class="home_card_btm_r8_ul">
-															<li>Dec 4, 2019</li>
+															<li>Dec 4, 2021</li>
 															<li><span class="dot"></span>3 Min Read</li>
 														</ul>
 													</div>

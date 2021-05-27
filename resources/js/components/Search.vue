@@ -18,13 +18,13 @@
 export default {
     data(){
         return{
-            showSearch : true,
+            showSearch : false,
             str : '',
         }
     },
     methods: {
         searchBlog(){
-            window.location = `/search?str=${this.str}`
+            window.location = `http://cherisheddream.xyz/cdblogfront/search?str=${this.str}`
         }
     },
 }

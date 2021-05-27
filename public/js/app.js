@@ -1939,13 +1939,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      showSearch: true,
+      showSearch: false,
       str: ''
     };
   },
   methods: {
     searchBlog: function searchBlog() {
-      window.location = "/search?str=".concat(this.str);
+      window.location = "http://cherisheddream.xyz/cdblogfront/search?str=".concat(this.str);
     }
   }
 });
@@ -20459,7 +20459,13 @@ var staticRenderFns = [
         _c("div", { staticClass: "cmnt_box_top dis_flx" }, [
           _c("div", { staticClass: "cmnt_box_top_left d-flex" }, [
             _c("div", { staticClass: "cmnt_img mar_r15" }, [
-              _c("img", { attrs: { src: "/img/girl2-cmnt.jpg", alt: "image" } })
+              _c("img", {
+                attrs: {
+                  src:
+                    "http://cherisheddream.xyz/cdblogfront/img/girl2-cmnt.jpg",
+                  alt: "image"
+                }
+              })
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "cmnnt_name" }, [
@@ -20493,7 +20499,13 @@ var staticRenderFns = [
         _c("div", { staticClass: "cmnt_box_top dis_flx" }, [
           _c("div", { staticClass: "cmnt_box_top_left d-flex" }, [
             _c("div", { staticClass: "cmnt_img mar_r15" }, [
-              _c("img", { attrs: { src: "/img/girl4-cmnt.jpg", alt: "image" } })
+              _c("img", {
+                attrs: {
+                  src:
+                    "http://cherisheddream.xyz/cdblogfront/img/girl4-cmnt.jpg",
+                  alt: "image"
+                }
+              })
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "cmnnt_name" }, [

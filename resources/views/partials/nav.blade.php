@@ -6,7 +6,7 @@
                 <div class="row align-items-center">
                     <div class="col-4 col-md-4 col-lg-4">
                         <div class="logo">
-                            <a href="/">
+                            <a href="{{asset('/')}}">
                                 <div class="logo_img">
                                     <img src="/img/logo.png" alt="image">
                                 </div>
@@ -18,21 +18,22 @@
                             <div class="menu_right_list">
                                 <ul class="menu_right_ul d-flex">
                                     <li class="dis_fx_cntr">
-                                        <a href="/">HOME</a>
+                                        <a href="{{asset('/')}}">HOME</a>
                                     </li>
                                     @if (count ($cats) > 0)
                                         @foreach ($cats as $cat)
                                         <li class="dis_fx_cntr">
-                                            <a href="/category/{{$cat->categoryName}}/{{$cat->id}}">{{$cat->categoryName}}</a>
+                                            <a href="{{url('/category',[$cat->categoryName,$cat->id])}}">{{$cat->categoryName}}</a>
+                                            {{-- <a href="/category/{{$cat->categoryName}}/{{$cat->id}}">{{$cat->categoryName}}</a> --}}
                                         </li>
                                         @endforeach
                                     @endif
                                     <li>
-                                        <a href="/about">ABOUT</a>
+                                        <a href="{{ url('/about') }}">ABOUT</a>
                                     </li>
 
                                     <li>
-                                        <a href="/contact">CONTACT</a>
+                                        <a href="{{ url('/contact') }}">CONTACT</a>
                                     </li>
 
                                     {{-- <li>

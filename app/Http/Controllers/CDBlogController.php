@@ -53,7 +53,7 @@ class CDBlogController extends Controller
 
         $blogs = Blog::with('user')->whereHas('tags',function($q) use($id){
             $q->where('tag_id', $id);
-        })->limit(5)->orderBy('id','desc')->select(['id','title','slug','user_id','featuredImage'])->paginate(6);
+        })->limit(5)->orderBy('id','desc')->select(['id','title','slug','user_id','featuredImage','post_excerpt'])->paginate(6);
         return view('tag',[
             'tagName' =>$tagName,
             'blogs' => $blogs,
